@@ -16,12 +16,3 @@ Objectif :
 Par la suite estimer s'il est préférable de chauffé au bois ou à l'électrique suivant la température extérieur et le cout ?
 
 
-
-sensor:
-  - platform: wood_calculator
-    poele_sensor: sensor.temperature_poele
-    temp_seuil: 60
-    duree_buche: 30
-    buches_stere: 250
-    prix_stere: 90
-
