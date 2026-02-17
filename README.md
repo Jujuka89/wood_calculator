@@ -42,3 +42,5 @@ A mettre dans "sensors" :
     prix_stere: 60
 ```
 
+<img width="880" height="134" alt="image" src="https://github.com/user-attachments/assets/c6a39d01-9ad8-4025-9f5a-9886c178bf42" />
+
