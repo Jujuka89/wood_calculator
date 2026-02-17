@@ -2,7 +2,7 @@
 
 Objectif :
 
-🔥 Détecter si le poêle est en marche via température fixée sur le poêle ou à proximité.
+🔥 Détecter si le poêle est allumé via une sonde de température fixée sur le poêle ou à proximité.
 
 ⏱️ 30 minutes = 1 bûche
 
