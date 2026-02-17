@@ -11,3 +11,6 @@ Objectif :
 💰 Calcul du coût journalier
 
 🔄 Reset automatique chaque jour
+
+
+Par la suite estimer s'il est préférable de chauffé au bois ou à l'électrique suivant la température extérieur et le cout ?
