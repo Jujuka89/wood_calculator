@@ -9,11 +9,15 @@ Objectif :
 
 - Une sonde sera placée sur le poêle ou à proximité pour detecter la chaleur. Pour exemple la mienne est derrière à 30cm et j'estime la chauffe à partir de 30°C.
 
+
 ⏱️ 30 minutes = 1 bûche
+
 
 🌲 Conversion en stère
 
+
 💰 Calcul du coût journalier
+
 
 🔄 Reset automatique chaque jour
 
@@ -21,9 +25,13 @@ Objectif :
 But: 
 
 - Calcule automatique de sa consommation de bois en stére sur l'année.
+  
 - Prédiction pour l'année suivante.
+  
 - Connaitre les jours de chauffe ainsi que les éconnomies.
+  
 - Comparaison avec les DJU
+  
 - Estimer s'il est préférable de chauffé au bois ou à l'électrique suivant la température extérieur et le cout ?
 
 
