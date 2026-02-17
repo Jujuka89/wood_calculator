@@ -30,12 +30,12 @@ estimer s'il est préférable de chauffé au bois ou à l'électrique suivant la
 <img width="1018" height="437" alt="image" src="https://github.com/user-attachments/assets/04776d84-4a31-4cd3-8d47-e1607a5fdc88" />
 
 
-
+```yaml
   - platform: wood_calculator
     poele_sensor: sensor.sonde_poele_a_bois_temperature
     temp_seuil: 30
     duree_buche: 30
     buches_stere: 250
     prix_stere: 60
-
+```
 
