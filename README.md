@@ -17,7 +17,7 @@ But:
 
 - Calcule automatique de sa consommation de bois en stére sur l'année.
 - Prédiction pour l'année suivante.
-- Connaitre les jours de chauffe ainsi que les éconnomies ou pas de gagner.
+- Connaitre les jours de chauffe ainsi que les éconnomies.
 - Comparaison avec les DJU
 
 
