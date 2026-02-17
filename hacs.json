@@ -1,6 +1,6 @@
 {
-  "name": "Test Jujuka89",
-  "domain": "test_jujuka89",
+  "name": "Wood calculator",
+  "domain": "wood_calculator",
   "homeassistant": "2024.1.0",
   "render_readme": true,
   "country": "FR"
