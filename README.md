@@ -3,6 +3,7 @@
 Objectif :
 
 🔥 Détecter si le poêle est en marche via température fixée sur le poêle ou à proximité.
+
 ⏱️ 30 minutes = 1 bûche
 
 🌲 Conversion en stère
