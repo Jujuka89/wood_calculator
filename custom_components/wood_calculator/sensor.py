@@ -120,5 +120,13 @@ class WoodBinarySensor(BinarySensorEntity):
     def is_on(self):
         return self.tracker.binary_state
 
+    @property
+    def icon(self):
+        if self.is_on:
+            return "mdi:fire"          # ON → flamme
+        return "mdi:fire-off"          # OFF → flamme éteinte
+
+    
+
 
 
