@@ -44,7 +44,6 @@ A mettre dans "sensors" :
 ```yaml
   - platform: wood_calculator
     poele_sensor: sensor.sonde_poele_a_bois_temperature
-    poele_sensor: sensor.sonde_poele_temperature
     temp_seuil: 30 #suivant le positionnement de la sonde
     duree_buche: 30
     buches_stere: 250
