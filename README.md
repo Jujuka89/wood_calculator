@@ -58,8 +58,8 @@ Création de plusieurs sensors :
 
 <img width="880" height="134" alt="image" src="https://github.com/user-attachments/assets/c6a39d01-9ad8-4025-9f5a-9886c178bf42" />
 
-<img width="1307" height="67" alt="image" src="https://github.com/user-attachments/assets/744d7b47-cd8a-4d0a-a819-82c82994127b" />
-<img width="1307" height="67" alt="image" src="https://github.com/user-attachments/assets/744d7b47-cd8a-4d0a-a819-82c82994127b" />
+<img width="1089" height="59" alt="image" src="https://github.com/user-attachments/assets/f8dbec16-53a6-4256-a962-45501d0c054a" />
+
 
 
 
