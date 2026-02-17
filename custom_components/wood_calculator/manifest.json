@@ -2,8 +2,15 @@
   "domain": "wood_calculator",
   "name": "Wood Calculator",
   "version": "1.0.0",
-  "documentation": "",
+  "documentation": "https://github.com/Jujuka89/wood_calculator",
   "dependencies": [],
-  "codeowners": [],
+  "codeowners": ["@jujuka89"],
   "requirements": []
+  "issue_tracker": "https://github.com/Jujuka89/wood_calculator/issues",
+
+
+  
+
+
+  
 }
