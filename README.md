@@ -72,5 +72,8 @@ Création de plusieurs sensors :
 
 
 
+<img width="1384" height="339" alt="image" src="https://github.com/user-attachments/assets/cca43a90-f917-448d-b4a8-c8f47564431d" />
+
+
 
 
