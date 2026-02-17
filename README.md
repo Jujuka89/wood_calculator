@@ -5,7 +5,7 @@
 
 Objectif :
 
-🔥 Détecter si le poêle est allumé via une sonde de température fixée sur le poêle ou à proximité.
+🔥 Détecter si le poêle est allumé:
 
 - Une sonde sera placée sur le poêle ou à proximité pour detecter la chaleur. Pour exemple la mienne est derrière à 30cm et j'estime la chauffe à partir de 30°C.
 
