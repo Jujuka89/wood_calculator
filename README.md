@@ -7,7 +7,7 @@ Objectif :
 
 
 
-**************************🔥 Détecter si le poêle est allumé ***************************************
+**************************🔥 Détecter si le poêle est allumé *************************************** ✅ 
 
 - Une sonde sera placée sur le poêle ou à proximité pour detecter la chaleur. Pour exemple la mienne est derrière à 30cm et j'estime la chauffe à partir de 30°C.
 
@@ -22,14 +22,14 @@ vertical: false
 features_position: bottom
 ```
 
-*********** OK **************************************************************************************
+**************************🔥 Journalier : bûches brûlées / stère *************************************** ✅ 
 
+<img width="461" height="154" alt="image" src="https://github.com/user-attachments/assets/5554f320-f0a0-481f-a062-3555e17bee54" />
 
 ⏱️ 30 minutes = 1 bûche (Estimation réglable)
 
-🔥 Journalier : bûches brûlées / stère
+**************************💰 Calcul du coût journalier *************************************** ❌
 
-💰 Calcul du coût journalier
 
 
 à venir: 
