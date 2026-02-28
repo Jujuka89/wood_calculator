@@ -50,13 +50,14 @@ grid_options:
 
 ⏱️ 30 minutes = 1 bûche (Estimation réglable)
 
-**************************💰 Calcul du coût journalier *************************************** ❌
+**************************💰 Calcul du coût journalier *************************************** ✅ 
+
+<img width="236" height="68" alt="image" src="https://github.com/user-attachments/assets/3a015891-168a-4d23-b56c-1d210c315902" />
+
+************************** Prédiction pour l'année suivant les DJU *************************************** ❌
 
 
 
-à venir: 
-
-- Prédiction pour l'année suivante.
 
 - Alerte remettre du bois
 
