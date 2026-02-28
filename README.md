@@ -21,9 +21,13 @@ Objectif :
 💰 Calcul du coût journalier
 
 
-But à venir: 
+à venir: 
 
 - Prédiction pour l'année suivante.
+
+- Alerte remettre du bois
+
+- Commande d'une ventilation suivant poele allumé et piece basse.
   
 - Connaitre les jours de chauffe ainsi que les éconnomies.
   
