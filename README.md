@@ -106,6 +106,7 @@ A mettre dans "sensors" :
     duree_buche: 30
     buches_stere: 250
     prix_stere: 60
+    debut_chauffe_mois: 9 # 9 = septembre
 ```
 
 
