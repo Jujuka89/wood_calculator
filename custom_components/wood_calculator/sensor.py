@@ -5,7 +5,6 @@ from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.helpers.restore_state import RestoreEntity
 from .const import *
 
-
 async def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
     temp_sensor = config.get("poele_sensor")
     seuil = config.get("temp_seuil", DEFAULT_TEMP_SEUIL)
@@ -13,8 +12,10 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
     buches_stere = config.get("buches_stere", DEFAULT_BUCHES_STERE)
     prix_stere = config.get("prix_stere", DEFAULT_PRIX_STERE)
 
+    # Création tracker
     tracker = WoodTracker(hass, temp_sensor, seuil, duree_buche, buches_stere)
 
+    # Capteurs
     log_sensor = WoodLogsSensor(tracker)
     stere_sensor = WoodStereSensor(tracker)
     stere_year_sensor = WoodStereYearSensor(tracker)
@@ -22,6 +23,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
     cost_sensor = WoodCostSensor(tracker, prix_stere)
     binary_sensor_poele = WoodBinarySensor(tracker)
 
+    # Ajouter les entités
     async_add_entities([
         log_sensor,
         stere_sensor,
@@ -31,6 +33,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
         stere_total_sensor
     ])
 
+    # Démarrer le tracker
     tracker.start()
 
 
@@ -39,7 +42,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
 # ============================================================
 
 class WoodTracker:
-    """Tracker du poêle avec compteur journalier, annuel et total"""
+    """Tracker du poêle avec compteurs journalier, annuel et total"""
     def __init__(self, hass, temp_sensor, seuil, duree_buche, buches_stere):
         self.hass = hass
         self.temp_sensor = temp_sensor
@@ -71,7 +74,7 @@ class WoodTracker:
             self.stere_year = 0
             self.last_year = current_year
 
-        # Reset quotidien + cumul annuel
+        # Reset quotidien + cumul annuel et total
         if today != self.last_day:
             if self.buches_stere:
                 daily_stere = self.logs / self.buches_stere
@@ -80,6 +83,7 @@ class WoodTracker:
             self.minutes_on = 0
             self.last_day = today
 
+        # Mise à jour état poêle
         state = self.hass.states.get(self.temp_sensor)
         if state and state.state not in ("unknown", "unavailable"):
             if float(state.state) >= self.seuil:
@@ -108,7 +112,7 @@ class WoodTracker:
 # ============================================================
 
 class WoodLogsSensor(SensorEntity):
-    """Capteur bûches brûlées par jour"""
+    """Bûches brûlées par jour"""
     def __init__(self, tracker):
         self.tracker = tracker
         self._attr_name = "Bûches brûlées (jour)"
@@ -120,7 +124,7 @@ class WoodLogsSensor(SensorEntity):
 
 
 class WoodStereSensor(SensorEntity):
-    """Capteur consommation bois journalier en stère"""
+    """Consommation bois journalier en stère"""
     def __init__(self, tracker):
         self.tracker = tracker
         self._attr_name = "Consommation Bois (stère)"
@@ -132,7 +136,7 @@ class WoodStereSensor(SensorEntity):
 
 
 class WoodStereYearSensor(SensorEntity, RestoreEntity):
-    """Capteur consommation bois annuel persistant"""
+    """Consommation bois annuel persistant"""
     def __init__(self, tracker):
         self.tracker = tracker
         self._attr_name = "Consommation Bois (année)"
@@ -153,7 +157,7 @@ class WoodStereYearSensor(SensorEntity, RestoreEntity):
 
 
 class WoodStereTotalSensor(SensorEntity, RestoreEntity):
-    """Capteur consommation bois total depuis toujours"""
+    """Consommation bois totale depuis toujours"""
     def __init__(self, tracker):
         self.tracker = tracker
         self._attr_name = "Consommation Bois (total)"
@@ -174,7 +178,7 @@ class WoodStereTotalSensor(SensorEntity, RestoreEntity):
 
 
 class WoodCostSensor(SensorEntity):
-    """Capteur coût journalier du bois"""
+    """Coût journalier du bois"""
     def __init__(self, tracker, prix_stere):
         self.tracker = tracker
         self.prix_stere = prix_stere
@@ -187,7 +191,7 @@ class WoodCostSensor(SensorEntity):
 
 
 class WoodBinarySensor(BinarySensorEntity):
-    """Binary sensor pour poêle en route"""
+    """Poêle en route"""
     def __init__(self, tracker):
         self.tracker = tracker
         self._attr_name = "Poêle en route"
