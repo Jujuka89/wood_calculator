@@ -12,20 +12,19 @@ Objectif :
 
 ⏱️ 30 minutes = 1 bûche
 
+🔥 Journalier : bûches brûlées / stère
 
-🌲 Conversion en stère
+📊 Annuel : stère depuis le 1er janvier
 
+🌍 Total : stère depuis toujours (Energy Dashboard friendly)
 
 💰 Calcul du coût journalier
 
+🔄 Persistant après reboot grâce à RestoreEntity
 
-🔄 Reset automatique chaque jour
 
+But à venir: 
 
-But: 
-
-- Calcule automatique de sa consommation de bois en stére sur l'année.
-  
 - Prédiction pour l'année suivante.
   
 - Connaitre les jours de chauffe ainsi que les éconnomies.
