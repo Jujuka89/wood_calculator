@@ -54,6 +54,10 @@ grid_options:
 
 <img width="236" height="68" alt="image" src="https://github.com/user-attachments/assets/3a015891-168a-4d23-b56c-1d210c315902" />
 
+
+************************** Consommation de stère depuis le début de la chauffe (période hiver) *************************************** ❌
+
+
 ************************** Prédiction pour l'année suivant les DJU *************************************** ❌
 
 
