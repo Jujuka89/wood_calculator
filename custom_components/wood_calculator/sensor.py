@@ -59,28 +59,27 @@ class WoodTracker:
         )
 
     async def update(self, now):
+    today = datetime.now().day
+    current_year = datetime.now().year
 
-        today = datetime.now().day
-        current_year = datetime.now().year
+    # Reset annuel
+    if current_year != self.last_year:
+        self.stere_year = 0
+        self.last_year = current_year
 
-        # Reset annuel
-        if current_year != self.last_year:
-            self.stere_year = 0
-            self.last_year = current_year
+    # Reset quotidien + cumul annuel
+    if today != self.last_day:
+        self.stere_year += (self.logs / self.buches_stere)
+        self.minutes_on = 0
+        self.last_day = today
 
-        # Reset quotidien + cumul annuel
-        if today != self.last_day:
-            self.stere_year += (self.logs / self.buches_stere)
-            self.minutes_on = 0
-            self.last_day = today
-
-        state = self.hass.states.get(self.temp_sensor)
-        if state and state.state not in ("unknown", "unavailable"):
-            if float(state.state) >= self.seuil:
-                self.minutes_on += 1
-                self._binary_state = True
-            else:
-                self._binary_state = False
+    state = self.hass.states.get(self.temp_sensor)
+    if state and state.state not in ("unknown", "unavailable"):
+        if float(state.state) >= self.seuil:
+            self.minutes_on += 1
+            self._binary_state = True
+        else:
+            self._binary_state = False
 
     @property
     def logs(self):
