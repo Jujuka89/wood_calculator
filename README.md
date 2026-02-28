@@ -51,7 +51,7 @@ grid_options:
 ⏱️ 30 minutes = 1 bûche (Estimation réglable)
 
 
-**************************📅 Saison de chauffe : consommation en stère persistante *************************************** ✅ 
+**************************📅 Saison de chauffe : consommation en stère ************************ ✅ 
 
 Un nouveau capteur `sensor.consommation_bois_stere_saison` est ajouté :
 - il cumule la consommation en stère sur la **saison de chauffe** (par défaut septembre → août),
