@@ -3,7 +3,7 @@
 
 🌲 wood_calculator
 
-Objectif :
+Objectifs :
 
 
 
