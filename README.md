@@ -11,6 +11,15 @@ Objectif :
 
 <img width="242" height="77" alt="image" src="https://github.com/user-attachments/assets/9d72eadd-028a-47c7-a991-c6574d7dd47b" />
 
+```yaml
+type: tile
+entity: sensor.poele_en_route
+show_entity_picture: false
+hide_state: false
+vertical: false
+features_position: bottom
+```
+
 *********** OK **************
 
 
