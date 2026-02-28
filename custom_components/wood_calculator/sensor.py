@@ -34,6 +34,7 @@ class WoodTracker:
         self.minutes_on = 0
         self.last_day = datetime.now().day
         self._binary_state = False
+        self.entities = []
 
     def start(self):
         async_track_time_interval(
