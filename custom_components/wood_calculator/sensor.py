@@ -29,19 +29,22 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
     binary_sensor_poele,
     stere_year_sensor
 ])
-
+    tracker.start()
 
 class WoodTracker:
     """Compteur de temps de fonctionnement du poêle"""
     def __init__(self, hass, temp_sensor, seuil, duree_buche):
-        self.hass = hass
-        self.temp_sensor = temp_sensor
-        self.seuil = seuil
-        self.duree_buche = duree_buche
-        self.minutes_on = 0
-        self.last_day = datetime.now().day
-        self._binary_state = False
-        self.entities = []
+    self.hass = hass
+    self.temp_sensor = temp_sensor
+    self.seuil = seuil
+    self.duree_buche = duree_buche
+    self.minutes_on = 0
+    self.last_day = datetime.now().day
+    self._binary_state = False
+    self.entities = []
+    self.stere_year = 0
+    self.last_year = datetime.now().year
+    self.buches_stere = None
 
     def start(self):
         async_track_time_interval(
