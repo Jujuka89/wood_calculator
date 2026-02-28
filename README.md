@@ -55,7 +55,13 @@ grid_options:
 <img width="236" height="68" alt="image" src="https://github.com/user-attachments/assets/3a015891-168a-4d23-b56c-1d210c315902" />
 
 
-************************** Consommation de stère depuis le début de la chauffe (période hiver) *************************************** ❌
+**************************📅 Saison de chauffe : consommation en stère persistante *************************************** ✅ 
+
+Un nouveau capteur `sensor.consommation_bois_stere_saison` est ajouté :
+- il cumule la consommation en stère sur la **saison de chauffe** (par défaut septembre → août),
+- il **conserve la valeur après redémarrage de Home Assistant**,
+- il se remet à zéro automatiquement au démarrage de la saison suivante,
+- le mois de début est réglable via `debut_chauffe_mois`.
 
 
 ************************** Prédiction pour l'année suivant les DJU *************************************** ❌
