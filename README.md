@@ -14,19 +14,11 @@ Objectif :
 *********** OK **************
 
 
-
-
-⏱️ 30 minutes = 1 bûche
+⏱️ 30 minutes = 1 bûche (Estimation réglable)
 
 🔥 Journalier : bûches brûlées / stère
 
-📊 Annuel : stère depuis le 1er janvier
-
-🌍 Total : stère depuis toujours (Energy Dashboard friendly)
-
 💰 Calcul du coût journalier
-
-🔄 Persistant après reboot grâce à RestoreEntity
 
 
 But à venir: 
