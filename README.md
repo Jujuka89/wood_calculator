@@ -26,6 +26,28 @@ features_position: bottom
 
 <img width="461" height="154" alt="image" src="https://github.com/user-attachments/assets/5554f320-f0a0-481f-a062-3555e17bee54" />
 
+```yaml
+type: tile
+entity: sensor.buches_brulees_jour
+vertical: false
+features_position: bottom
+grid_options:
+  columns: 12
+  rows: 1
+
+```
+
+```yaml
+type: tile
+entity: sensor.consommation_bois_stere
+vertical: false
+features_position: bottom
+grid_options:
+  columns: 12
+  rows: 1
+
+```
+
 ⏱️ 30 minutes = 1 bûche (Estimation réglable)
 
 **************************💰 Calcul du coût journalier *************************************** ❌
