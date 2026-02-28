@@ -9,6 +9,12 @@ Objectif :
 
 - Une sonde sera placée sur le poêle ou à proximité pour detecter la chaleur. Pour exemple la mienne est derrière à 30cm et j'estime la chauffe à partir de 30°C.
 
+<img width="242" height="77" alt="image" src="https://github.com/user-attachments/assets/9d72eadd-028a-47c7-a991-c6574d7dd47b" />
+
+*********** OK **************
+
+
+
 
 ⏱️ 30 minutes = 1 bûche
 
