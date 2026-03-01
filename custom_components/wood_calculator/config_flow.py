@@ -27,7 +27,10 @@ class WoodCalculatorConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         if user_input is not None:
             await self.async_set_unique_id(user_input["poele_sensor"])
             self._abort_if_unique_id_configured()
-            return self.async_create_entry(title="Wood Calculator", data=user_input)
+            return self.async_create_entry(
+                title="Wood Calculator",
+                data=user_input,
+            )
 
         schema = vol.Schema(
             {
@@ -42,3 +45,9 @@ class WoodCalculatorConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     "debut_chauffe_mois", default=DEFAULT_DEBUT_CHAUFFE_MOIS
                 ): vol.All(vol.Coerce(int), vol.Range(min=1, max=12)),
             }
+        )
+
+        return self.async_show_form(
+            step_id="user",
+            data_schema=schema,
+        )
