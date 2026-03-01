@@ -1,7 +1,7 @@
 {
   "domain": "wood_calculator",
   "name": "Wood Calculator",
-  "version": "V1.1.0",
+  "version": "V1.2.0",
   "documentation": "https://github.com/Jujuka89/wood_calculator",
   "dependencies": [],
   "codeowners": ["@Jujuka89"],
