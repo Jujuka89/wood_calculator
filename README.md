@@ -53,15 +53,18 @@ Un nouveau capteur `sensor.consommation_bois_stere_saison` est ajouté :
 
 `sensor.cout_bois_jour`
 
-*********************** Prédiction pour l'année suivant les DJU **********************************❌
+
+************* Ajout de l'interface de réglages dans intégration *************************************************✅ 
+
+<img width="413" height="639" alt="image" src="https://github.com/user-attachments/assets/964c0cb9-41c6-4f31-955e-7d530e6cc08a" />
 
 
 
 
+
+- Prédiction pour l'année suivant les DJU 
 - Alerte remettre du bois
-
 - Commande d'une ventilation suivant poele allumé et piece basse.
-  
 - Connaitre les jours de chauffe ainsi que les éconnomies.
   
 - Comparaison avec les DJU
