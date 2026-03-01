@@ -26,10 +26,10 @@ features_position: bottom
 
 <img width="461" height="154" alt="image" src="https://github.com/user-attachments/assets/5554f320-f0a0-481f-a062-3555e17bee54" />
 
-sensor.consommation_bois_stere
-
-sensor.buches_brulees_jour
-
+Quantités de bois en stére (NON UTILE par jour)
+`sensor.consommation_bois_stere`
+Buche brulé / jour
+`sensor.buches_brulees_jour`
 
 
 ⏱️ 30 minutes = 1 bûche (Estimation réglable)
@@ -47,7 +47,7 @@ Un nouveau capteur `sensor.consommation_bois_stere_saison` est ajouté :
 
 <img width="236" height="68" alt="image" src="https://github.com/user-attachments/assets/3a015891-168a-4d23-b56c-1d210c315902" />
 
-sensor.cout_bois_jour
+`sensor.cout_bois_jour`
 
 
 *** Prédiction pour l'année suivant les DJU ***❌
