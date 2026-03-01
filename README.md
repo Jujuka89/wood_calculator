@@ -26,27 +26,11 @@ features_position: bottom
 
 <img width="461" height="154" alt="image" src="https://github.com/user-attachments/assets/5554f320-f0a0-481f-a062-3555e17bee54" />
 
-```yaml
-type: tile
-entity: sensor.buches_brulees_jour
-vertical: false
-features_position: bottom
-grid_options:
-  columns: 12
-  rows: 1
+sensor.consommation_bois_stere
 
-```
+sensor.buches_brulees_jour
 
-```yaml
-type: tile
-entity: sensor.consommation_bois_stere
-vertical: false
-features_position: bottom
-grid_options:
-  columns: 12
-  rows: 1
 
-```
 
 ⏱️ 30 minutes = 1 bûche (Estimation réglable)
 
@@ -62,6 +46,9 @@ Un nouveau capteur `sensor.consommation_bois_stere_saison` est ajouté :
 ***💰 Calcul du coût journalier ***✅ 
 
 <img width="236" height="68" alt="image" src="https://github.com/user-attachments/assets/3a015891-168a-4d23-b56c-1d210c315902" />
+
+sensor.cout_bois_jour
+
 
 *** Prédiction pour l'année suivant les DJU ***❌
 
