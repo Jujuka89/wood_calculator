@@ -6,7 +6,9 @@
   "dependencies": [],
   "codeowners": ["@Jujuka89"],
   "requirements": []
+  "config_flow": true,
 
+  
 
 
   
