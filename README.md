@@ -15,13 +15,9 @@ Objectifs :
 
 `sensor.poele_en_route`
 
-*************************🔥 Journalier : bûches brûlées / stère ******************************✅ 
+*************************🔥 Journalier : bûches brûlées + Coût ******************************✅ 
 
 <img width="461" height="154" alt="image" src="https://github.com/user-attachments/assets/5554f320-f0a0-481f-a062-3555e17bee54" />
-
-Quantités de bois en stére (NON UTILE par jour)
-
-`sensor.consommation_bois_stere`
 
 Buche brulé / jour
 
