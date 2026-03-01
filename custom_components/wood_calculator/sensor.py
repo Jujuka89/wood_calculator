@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 
 from homeassistant.components.binary_sensor import BinarySensorEntity
 from homeassistant.components.sensor import SensorEntity
+from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.helpers.restore_state import RestoreEntity
 
@@ -11,6 +12,7 @@ from .const import (
     DEFAULT_DUREE_BUCHE,
     DEFAULT_PRIX_STERE,
     DEFAULT_TEMP_SEUIL,
+    DOMAIN,
 )
 
 
@@ -34,11 +36,11 @@ async def _async_setup_entities(hass, config, async_add_entities, unique_suffix=
     tracker = WoodTracker(hass, temp_sensor, seuil, duree_buche, debut_chauffe_mois)
 
     entities = [
-        WoodLogsSensor(tracker, unique_suffix),
-        WoodStereSensor(tracker, buches_stere, unique_suffix),
-        WoodSeasonStereSensor(tracker, buches_stere, unique_suffix),
-        WoodCostSensor(tracker, buches_stere, prix_stere, unique_suffix),
-        WoodBinarySensor(tracker, unique_suffix),
+        WoodLogsSensor(tracker, temp_sensor, unique_suffix),
+        WoodStereSensor(tracker, buches_stere, temp_sensor, unique_suffix),
+        WoodSeasonStereSensor(tracker, buches_stere, temp_sensor, unique_suffix),
+        WoodCostSensor(tracker, buches_stere, prix_stere, temp_sensor, unique_suffix),
+        WoodBinarySensor(tracker, temp_sensor, unique_suffix),
     ]
     async_add_entities(entities)
     tracker.start()
@@ -122,8 +124,28 @@ class WoodTracker:
         return self._binary_state
 
 
-class WoodLogsSensor(SensorEntity):
-    def __init__(self, tracker, unique_suffix=None):
+class WoodBaseEntity:
+    def __init__(self, source_sensor, unique_suffix=None):
+        self._source_sensor = source_sensor
+        self._entry_unique_suffix = unique_suffix
+
+    @property
+    def device_info(self):
+        if not self._entry_unique_suffix:
+            return None
+
+        return DeviceInfo(
+            identifiers={(DOMAIN, self._entry_unique_suffix)},
+            name="Wood Calculator",
+            manufacturer="wood_calculator",
+            model="Poêle à bois",
+            configuration_url="https://github.com/Jujuka89/wood_calculator",
+        )
+
+
+class WoodLogsSensor(WoodBaseEntity, SensorEntity):
+    def __init__(self, tracker, source_sensor, unique_suffix=None):
+        super().__init__(source_sensor, unique_suffix)
         self.tracker = tracker
         if unique_suffix:
             self._attr_unique_id = f"wood_logs_day_{unique_suffix}"
@@ -135,8 +157,9 @@ class WoodLogsSensor(SensorEntity):
         return self.tracker.logs
 
 
-class WoodStereSensor(SensorEntity):
-    def __init__(self, tracker, buches_stere, unique_suffix=None):
+class WoodStereSensor(WoodBaseEntity, SensorEntity):
+    def __init__(self, tracker, buches_stere, source_sensor, unique_suffix=None):
+        super().__init__(source_sensor, unique_suffix)
         self.tracker = tracker
         self.buches_stere = buches_stere
         if unique_suffix:
@@ -149,8 +172,9 @@ class WoodStereSensor(SensorEntity):
         return round(self.tracker.logs / self.buches_stere, 4)
 
 
-class WoodSeasonStereSensor(SensorEntity, RestoreEntity):
-    def __init__(self, tracker, buches_stere, unique_suffix=None):
+class WoodSeasonStereSensor(WoodBaseEntity, SensorEntity, RestoreEntity):
+    def __init__(self, tracker, buches_stere, source_sensor, unique_suffix=None):
+        super().__init__(source_sensor, unique_suffix)
         self.tracker = tracker
         self.buches_stere = buches_stere
         if unique_suffix:
@@ -185,8 +209,9 @@ class WoodSeasonStereSensor(SensorEntity, RestoreEntity):
         }
 
 
-class WoodCostSensor(SensorEntity):
-    def __init__(self, tracker, buches_stere, prix_stere, unique_suffix=None):
+class WoodCostSensor(WoodBaseEntity, SensorEntity):
+    def __init__(self, tracker, buches_stere, prix_stere, source_sensor, unique_suffix=None):
+        super().__init__(source_sensor, unique_suffix)
         self.tracker = tracker
         self.buches_stere = buches_stere
         self.prix_stere = prix_stere
@@ -201,10 +226,11 @@ class WoodCostSensor(SensorEntity):
         return round(stere * self.prix_stere, 2)
 
 
-class WoodBinarySensor(BinarySensorEntity):
+class WoodBinarySensor(WoodBaseEntity, BinarySensorEntity):
     """Binary sensor pour poêle en route."""
 
-    def __init__(self, tracker, unique_suffix=None):
+    def __init__(self, tracker, source_sensor, unique_suffix=None):
+        super().__init__(source_sensor, unique_suffix)
         self.tracker = tracker
         if unique_suffix:
             self._attr_unique_id = f"wood_is_on_{unique_suffix}"
