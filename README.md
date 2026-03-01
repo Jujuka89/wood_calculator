@@ -1,7 +1,11 @@
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/Jujuka89/wood_calculator/releases)
 
 
+
 🌲 wood_calculator
+
+<img width="1090" height="285" alt="image" src="https://github.com/user-attachments/assets/cbdc6760-939b-45e0-8460-a1a9ca04c606" />
+
 
 Objectifs :
 
