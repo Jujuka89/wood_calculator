@@ -100,3 +100,26 @@ Création de plusieurs sensors :
 <img width="1384" height="339" alt="image" src="https://github.com/user-attachments/assets/cca43a90-f917-448d-b4a8-c8f47564431d" />
 
 
+## Voir une page complète **dans l'intégration** (temps réel)
+
+Tu as raison : si tu veux tout voir depuis **Paramètres > Appareils et services > Wood Calculator** (et pas un dashboard Lovelace), il faut que les entités soient rattachées à un **appareil**.
+
+C'est maintenant le cas : les capteurs et le binaire `Poêle en route` sont regroupés dans l'appareil **Wood Calculator**.
+
+### Où voir les valeurs
+
+1. Va dans **Paramètres > Appareils et services**.
+2. Ouvre l'intégration **Wood Calculator**.
+3. Clique sur l'appareil **Wood Calculator**.
+4. Tu verras la liste complète des entités et leurs valeurs qui se mettent à jour.
+
+### Entités affichées
+
+- `Bûches brûlées (jour)`
+- `Consommation Bois (stère)`
+- `Consommation Bois (stère saison)`
+- `Coût Bois (jour)`
+- `Poêle en route`
+
+> Si tu veux en plus une "belle page" graphique (jauges/historiques), il faut toujours passer par un dashboard Lovelace. L'écran d'intégration affiche surtout les entités et leurs états.
+
