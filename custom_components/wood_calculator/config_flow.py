@@ -16,8 +16,8 @@ from .const import (
     DOMAIN,
 )
 
-
-class WoodCalculatorConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+@config_entries.HANDLERS.register(DOMAIN)
+class WoodCalculatorConfigFlow(config_entries.ConfigFlow):
     """Handle a config flow for Wood Calculator."""
 
     VERSION = 1
