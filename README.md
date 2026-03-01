@@ -13,6 +13,7 @@ Objectifs :
 
 <img width="242" height="77" alt="image" src="https://github.com/user-attachments/assets/9d72eadd-028a-47c7-a991-c6574d7dd47b" />
 
+`sensor.poele_en_route`
 
 *************************🔥 Journalier : bûches brûlées / stère ******************************✅ 
 
