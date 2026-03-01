@@ -7,7 +7,7 @@ Objectifs :
 
 
 
-***************************************************🔥 Détecter si le poêle est allumé *************************************************✅ 
+************************🔥 Détecter si le poêle est allumé ***********************************✅ 
 
 - Une sonde sera placée sur le poêle ou à proximité pour detecter la chaleur. Pour exemple la mienne est derrière à 30cm et j'estime la chauffe à partir de 30°C.
 
@@ -22,7 +22,7 @@ vertical: false
 features_position: bottom
 ```
 
-*****************************🔥 Journalier : bûches brûlées / stère ***************************************✅ 
+*************************🔥 Journalier : bûches brûlées / stère ******************************✅ 
 
 <img width="461" height="154" alt="image" src="https://github.com/user-attachments/assets/5554f320-f0a0-481f-a062-3555e17bee54" />
 
@@ -38,7 +38,7 @@ Buche brulé / jour
 ⏱️ 30 minutes = 1 bûche (Estimation réglable)
 
 
-****************************📅 Saison de chauffe : consommation en stère *****************************✅ 
+***********************📅 Saison de chauffe : consommation en stère *************************✅ 
 
 Un nouveau capteur `sensor.consommation_bois_stere_saison` est ajouté :
 
@@ -47,14 +47,13 @@ Un nouveau capteur `sensor.consommation_bois_stere_saison` est ajouté :
 - il se remet à zéro automatiquement au démarrage de la saison suivante,
 - le mois de début est réglable via `debut_chauffe_mois`.
 
-***************************************************💰 Calcul du coût journalier *************************************************✅ 
+**************💰 Calcul du coût journalier *************************************************✅ 
 
 <img width="236" height="68" alt="image" src="https://github.com/user-attachments/assets/3a015891-168a-4d23-b56c-1d210c315902" />
 
 `sensor.cout_bois_jour`
 
-
-*************************************************** Prédiction pour l'année suivant les DJU *************************************************❌
+*********************** Prédiction pour l'année suivant les DJU **********************************❌
 
 
 
