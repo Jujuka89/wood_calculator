@@ -45,7 +45,8 @@ Un nouveau capteur `sensor.consommation_bois_stere_saison` est ajouté :
 
 ************* Ajout de l'interface de réglages dans intégration *************************************************✅ 
 
-<img width="413" height="639" alt="image" src="https://github.com/user-attachments/assets/964c0cb9-41c6-4f31-955e-7d530e6cc08a" />
+<img width="405" height="633" alt="image" src="https://github.com/user-attachments/assets/e3852ac5-e303-428f-9dec-c092bb78a958" />
+
 
 
 
