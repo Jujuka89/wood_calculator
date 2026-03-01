@@ -48,14 +48,11 @@ Un nouveau capteur `sensor.consommation_bois_stere_saison` est ajouté :
 
 
 
-
+- Pouvoir entrer sa quantitée de stock de bois pour la saison avec une alerte suivant la consommation.
 - Prédiction pour l'année suivant les DJU 
 - Alerte remettre du bois
 - Commande d'une ventilation suivant poele allumé et piece basse.
 - Connaitre les jours de chauffe ainsi que les éconnomies.
-  
-- Comparaison avec les DJU
-  
 - Estimer s'il est préférable de chauffé au bois ou à l'électrique suivant la température extérieur et le cout ?
 
 
