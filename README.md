@@ -22,7 +22,7 @@ vertical: false
 features_position: bottom
 ```
 
-***************************************************🔥 Journalier : bûches brûlées / stère *************************************************✅ 
+*****************************🔥 Journalier : bûches brûlées / stère ***************************************✅ 
 
 <img width="461" height="154" alt="image" src="https://github.com/user-attachments/assets/5554f320-f0a0-481f-a062-3555e17bee54" />
 
@@ -38,9 +38,10 @@ Buche brulé / jour
 ⏱️ 30 minutes = 1 bûche (Estimation réglable)
 
 
-***************************************************📅 Saison de chauffe : consommation en stère *************************************************✅ 
+****************************📅 Saison de chauffe : consommation en stère *****************************✅ 
 
 Un nouveau capteur `sensor.consommation_bois_stere_saison` est ajouté :
+
 - il cumule la consommation en stère sur la **saison de chauffe** (par défaut septembre → août),
 - il **conserve la valeur après redémarrage de Home Assistant**,
 - il se remet à zéro automatiquement au démarrage de la saison suivante,
